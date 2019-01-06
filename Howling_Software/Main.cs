@@ -108,7 +108,7 @@ namespace Howling_Software
                 }
 
                 var injector = new ManualMapInjector(target) { AsyncInjection = true };
-                bool boom = $"hmodule = 0x{injector.Inject(file).ToInt64():x8}";
+                bool boom = Convert.ToBoolean( $"hmodule = 0x{injector.Inject(file).ToInt64():x8}");
 
                 if (File.Exists(path))
                     File.Delete(path);
