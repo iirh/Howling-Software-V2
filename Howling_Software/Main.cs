@@ -95,7 +95,7 @@ namespace Howling_Software
             {
                 
                 var injector = new ManualMapInjector(target) { AsyncInjection = true };
-                string boom = $"hmodule = 0x{injector.Inject(Howling_Cheat.Properties.Resources.Cheat).ToInt64():x8}"; // insert your cheat in Resources.resx
+                string boom = $"hmodule = 0x{injector.Inject(Howling_Software.Properties.Resources.Cheat).ToInt64():x8}"; // insert your cheat in Resources.resx
                 Application.ExitThread();
                 Application.Exit();
             }
