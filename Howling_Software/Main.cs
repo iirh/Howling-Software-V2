@@ -94,25 +94,8 @@ namespace Howling_Software
             if (selecedcheat == "Howling Cheat CSGO") 
             {
                 
-                string Temppath = Path.GetTempPath();
-                var path = Temppath + Globals.CheatName;
-
-                client.DownloadFile(Globals.DownLink, path);
-
-                var file = File.ReadAllBytes(path);
-
-                if (!File.Exists(path))
-                {
-                    Error.CstmError.Show("unexpected error. File not found! press OK to restart client...");
-                    Application.Restart();
-                }
-
                 var injector = new ManualMapInjector(target) { AsyncInjection = true };
-                bool boom = Convert.ToBoolean( $"hmodule = 0x{injector.Inject(file).ToInt64():x8}");
-
-                if (File.Exists(path))
-                    File.Delete(path);
-
+                string boom = $"hmodule = 0x{injector.Inject(Howling_Cheat.Properties.Resources.Cheat).ToInt64():x8}"; // insert your cheat in Resources.resx
                 Application.ExitThread();
                 Application.Exit();
             }
