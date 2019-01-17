@@ -14,7 +14,6 @@ namespace Howling_Software
         public static string username = ""; //don´t change
         public static string cheat1 = "Howling Cheat CSGO"; // CheatName in Listbox
         public static string secret_key = ""; //your Secret Code
-        public static string DownLink = ""; //your download link
         public static string CheatName = "Cheat.dll"; // Cheat name
     }
     
