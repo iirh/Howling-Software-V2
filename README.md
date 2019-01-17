@@ -1,4 +1,3 @@
 # Howling-Software-V2
 
-Updated Version
-
+Howling Software is a open source CSGO Cheat loader using ManualMap Injection.
